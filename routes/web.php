@@ -4,13 +4,17 @@ use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
-use App\Livewire\Users\Table;
+use App\Livewire\Users\Table as UserTable;
+use App\Livewire\Posts\Table as PostTable;
+
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('users', Table::class);
+Route::get('posts', PostTable::class);
+
+Route::get('users', UserTable::class);
 
 
 Route::view('dashboard', 'dashboard')
