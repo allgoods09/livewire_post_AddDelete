@@ -21,7 +21,7 @@
                 <th class="border border-gray-300 px-4 py-2">Title</th>
                 <th class="border border-gray-300 px-4 py-2">Content</th>
                 <th class="border border-gray-300 px-4 py-2">Author</th>
-                <th class="border border-gray-300 px-4 py-2">Archive</th>
+                <th class="border border-gray-300 px-4 py-2">Actions</th>
 
             </tr>
         </thead>
