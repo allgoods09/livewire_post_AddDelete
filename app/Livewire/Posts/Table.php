@@ -20,7 +20,7 @@ class Table extends Component
 
     public function refreshPosts()
     {
-        $this->posts = Posts::latest()->get();
+        $this->posts = Posts::orderBy('id', 'asc')->get();
         $this->showForm = false;
     }
 
