@@ -7,7 +7,7 @@ use App\Models\Posts;
 
 class Table extends Component
 {   
-    protected $listeners = ['post-added' => 'refreshPosts', 'postUpdated' => 'refreshPost'];
+    protected $listeners = ['post-added' => 'refreshPosts', 'postUpdated' => 'refreshPost', 'cancelCreate' => 'hideCreate'];
 
     public $posts;
 
@@ -21,6 +21,11 @@ class Table extends Component
     public function refreshPosts()
     {
         $this->posts = Posts::orderBy('id', 'asc')->get();
+        $this->showForm = false;
+    }
+
+    public function hideCreate()
+    {
         $this->showForm = false;
     }
 

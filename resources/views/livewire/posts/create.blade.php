@@ -55,14 +55,24 @@
             <label for="is_archived" class="text-sm text-gray-300">Archive immediately</label>
         </div>
 
-        <!-- Submit -->
+        <!-- Submit & Cancel -->
         <div class="flex justify-end space-x-3">
-            <button type="submit"
-                    wire:loading.attr="disabled"
-                    class="px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition">
-                <span wire:loading.remove>Save Post</span>
-                <span wire:loading>Saving...</span>
+            <button
+                type="button"
+                wire:click="$dispatch('cancelCreate')"
+                class="px-4 py-2 bg-rose-500 text-white rounded-lg hover:bg-rose-600 transition shadow-sm"
+            >
+                Cancel
+            </button>
+
+            <button
+                type="submit"
+                wire:loading.attr="disabled"
+                class="px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+                Save Post
             </button>
         </div>
+
     </form>
 </div>
