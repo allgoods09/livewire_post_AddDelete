@@ -13,12 +13,20 @@ class TableRows extends Component
     {
         $this->post->is_archived = true;
         $this->post->save();
+        $this->dispatch('postUpdated');
     }
 
     public function unArchive()
     {
         $this->post->is_archived = false;
         $this->post->save();
+        $this->dispatch('postUpdated');
+    }
+
+    public function delete()
+    {
+        $this->post->delete();
+        $this->dispatch('postUpdated');
     }
 
     public function render()

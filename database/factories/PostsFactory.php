@@ -19,6 +19,7 @@ class PostsFactory extends Factory
         return [
             'title' => $this->faker->sentence,
             'content' => $this->faker->paragraph,
+            'author' =>$this->faker->name,
             'is_archived' => false,
         ];
     }

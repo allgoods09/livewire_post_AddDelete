@@ -12,6 +12,7 @@ class Posts extends Model
     protected $fillable = [
         'title',
         'content',
+        'author',
         'is_archived',
     ];
 }
